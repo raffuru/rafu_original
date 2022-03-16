@@ -1,0 +1,353 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fffadf;
+}
+
+p{
+    color: #585d37;
+    line-height: 2;
+    letter-spacing: 0.1em;
+    font-size: 23px;
+}
+
+h2,h3{
+    color: #585d37;
+    letter-spacing: 0.1em;
+}
+
+h2{
+    font-size: 30px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    padding: 10px 50px;
+}
+
+.header h1{
+    color: #fff;
+}
+
+.navlist{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navlist li{
+    padding: 0 30px;
+}
+
+.navlist li a{
+    color: #fff;
+}
+
+.slider{
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+.slider-item01{
+    background-image: url(/images/topimage01.gif);
+}
+
+.slider-item02{
+    background-image: url(/images/tehai.jpg);
+}
+
+.slider-item03{
+    background-image: url(/images/barabarahai.jpg);
+}
+
+.slider-item{
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.toptitle{
+    width: 50%;
+    position: absolute;
+    top: 45%;
+    left: 51%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+}
+
+.toptitle img{
+    width: 100%;
+}
+
+.about{
+    display: flex;
+    padding: 100px 0;
+}
+
+.left{
+    width: 55%;
+}
+
+.leftimg{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.leftimg img{
+    width: 100%;
+}
+.left p{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 74%;
+}
+
+.right{
+    width: 45%;
+}
+
+.right img{
+    width: 100%;
+}
+
+.rule{
+    display: flex;
+    width: 100%;
+}
+
+.left2{
+    width: 45%;
+    padding-top: 200px;
+}
+
+.left2 img{
+    width: 100%;
+}
+
+.right2{
+    width: 55%;
+    padding-right: 30px;
+}
+
+.right2img{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.right2img img{
+    width: 100%;
+}
+
+.right2 p{
+    font-size: 23px;
+}
+
+.right2desc{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.first{
+    width: 80%;
+    margin: 50px auto;
+}
+
+.second{
+    margin-bottom: 50px;
+}
+
+.sort{
+    display: flex;
+    padding-top: 100px;
+}
+
+.left3{
+    width: 45%;
+    padding-top: 10px;
+    padding-left: 50px;
+}
+
+.left3img{
+    width: 90%;
+    margin: 80px auto;
+}
+
+.left3img img{
+    width: 100%;
+}
+
+.left3desc{
+    width: 70%;
+    margin: 50px auto;
+}
+
+.kazu{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.ji{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.sort h2{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.haiwhole{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.kazuhai{
+    width: 30%;
+}
+
+.jihai{
+    width: 45%;
+}
+
+.haicontent img{
+    width: 100%;
+}
+
+.haicontent h3{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.right3{
+    width: 55%;
+}
+
+.goal{
+    display: flex;
+    padding-top: 100px;
+}
+
+.left4{
+    width: 45%;
+}
+
+.left4 img{
+    width: 100%;
+}
+
+.right4{
+    width: 55%;
+    padding-right: 50px;
+}
+
+.right4img{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.right4img img{
+    width: 100%;
+}
+
+.right4desc{
+    width: 70%;
+    margin: 50px auto;
+}
+
+.set{
+    padding-top: 150px;
+}
+
+.title{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.title img{
+    width: 100%;
+}
+
+.setdesc{
+    width: 500px;
+    margin: 50px auto 80px;
+}
+
+.setwhole{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.setcontent{
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.setcontent h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.setimg{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.setimg img{
+    width: 100%;
+}
+
+.setcontentdesc{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.setcontentdesc p{
+    font-size: 18px;
+}
+
+.footer{
+    background-color: #8f9435;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.footerleft{
+    width: 700px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.footerlist{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerlist li a{
+    color: #585d37;
+}
+
+.footerright{
+    width: 250px;
+}
+
+.footerright h1{
+    color: #585d37;
+    text-align: center;
+}

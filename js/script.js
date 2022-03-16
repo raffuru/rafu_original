@@ -1,0 +1,12 @@
+$('.slider').slick({
+    fade:true,
+    autoplay:true,
+    autoplayspeed:5000,
+    speed:3000,
+    slidesToShow:1,
+    slidesToScroll:1,
+    arrows:false,
+    dots:false,
+    infinite:true,
+    pauseOnHover:false,
+})
