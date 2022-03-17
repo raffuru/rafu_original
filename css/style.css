@@ -6,6 +6,19 @@
     box-sizing: border-box;
 }
 
+.element{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: opacity 1s, visibility 1s, transform 1s;
+}
+
+.is-fadein{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
 body{
     background-color: #fffadf;
 }
@@ -34,15 +47,24 @@ h2{
     z-index: 2;
     width: 100%;
     padding: 10px 50px;
+    height: 65px;
+    transition: 0.5s;
+    background-color: #fff;
+    opacity: 0.8;
+}
+
+.header.hide{
+    transform: translateY(-65px);
 }
 
 .header h1{
-    color: #fff;
+    color: #585d37;
 }
 
 .navlist{
     display: flex;
     justify-content: flex-end;
+    padding-top: 15px;
 }
 
 .navlist li{
@@ -50,7 +72,7 @@ h2{
 }
 
 .navlist li a{
-    color: #fff;
+    color: #585d37;
 }
 
 .slider{
@@ -90,6 +112,11 @@ h2{
 
 .toptitle img{
     width: 100%;
+}
+
+svg{
+    height: 16vh;
+    width: 100vw;
 }
 
 .about{
