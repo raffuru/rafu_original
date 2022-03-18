@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-.element{
+/* .element{
     opacity: 0;
     visibility: hidden;
     transform: translateY(30px);
@@ -17,7 +17,7 @@
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
-}
+} */
 
 body{
     background-color: #fffadf;
@@ -122,6 +122,7 @@ svg{
 .about{
     display: flex;
     padding: 100px 0;
+    flex-wrap: wrap;
 }
 
 .left{
@@ -151,9 +152,24 @@ svg{
     width: 100%;
 }
 
+/* aboutのレスポンシブ */
+@media(max-width:600px){
+    .left{
+        width: 100%;
+    }
+
+    .right{
+        width: 100%;
+        margin-top: 80px;
+        padding-left: 15%;
+    }
+}
+
+
 .rule{
     display: flex;
     width: 100%;
+    flex-wrap: wrap-reverse;
 }
 
 .left2{
@@ -197,9 +213,25 @@ svg{
     margin-bottom: 50px;
 }
 
+/* ruleのレスポンシブ */
+@media(max-width:600px){
+    .left2{
+        width: 100%;
+        padding-top: 50px;
+        padding-right: 15%;
+    }
+
+    .right2{
+        width: 100%;
+        padding-right: 0;
+    }
+}
+
+
 .sort{
     display: flex;
     padding-top: 100px;
+    flex-wrap: wrap;
 }
 
 .left3{
@@ -265,9 +297,23 @@ svg{
     width: 55%;
 }
 
+/* sortのレスポンシブ */
+@media(max-width:600px){
+    .left3{
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .right3{
+        width: 100%;
+    }
+}
+
+
 .goal{
     display: flex;
-    padding-top: 100px;
+    padding-top: 50px;
+    flex-wrap: wrap-reverse;
 }
 
 .left4{
@@ -296,6 +342,21 @@ svg{
     width: 70%;
     margin: 50px auto;
 }
+
+/* goalのレスポンシブ */
+@media(max-width:600px){
+    .left4{
+        width: 100%;
+        margin-top: 50px;
+        padding-right: 15%;
+    }
+
+    .right4{
+        width: 100%;
+        padding-right: 0;
+    }
+}
+
 
 .set{
     padding-top: 150px;
@@ -347,6 +408,26 @@ svg{
 .setcontentdesc p{
     font-size: 18px;
 }
+
+/* setのレスポンシブ */
+@media(max-width:600px){
+    .set{
+        padding-top: 100px;
+    }
+
+    .title{
+        width: 80%;
+    }
+
+    .setdesc{
+        width: 70%;
+    }
+
+    .setcontentdesc{
+        width: 85%;
+    }
+}
+
 
 .footer{
     background-color: #8f9435;
