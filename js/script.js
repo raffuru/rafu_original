@@ -31,6 +31,30 @@ $(function(){
   });
 
 
+//   全要素のフェードイン設定
+$(function (){
+    $(window).scroll(function (){
+        const wHight = $(window).height();
+        const scrollAmount = $(window).scrollTop();
+
+        let buffer;
+        if ($(window).width() > 768){
+            buffer = 300;
+        } else{
+            buffer = 100;
+        }
+
+        $('.element').each(function(){
+            const targetPosition = $(this).offset().top;
+            if (scrollAmount > targetPosition - wHight + buffer){
+                $(this).addClass("is-fadein");
+                console.log(buffer);
+            }
+        });
+    });
+});
+
+
 // 要素間の境界wavify(うまく行ってない)
   $('#wave').wavify({
     height: 60,
@@ -39,42 +63,3 @@ $(function(){
     color: '#fff',
     speed: .25,
   });
-
-//   全要素のフェードイン設定
-// $(function (){
-//     $(window).scroll(function (){
-//         const wHight = $(window).height();
-//         const scrollAmount = $(window).scrollTop();
-
-//         let buffer;
-//         if ($(window).width() > 768){
-//             buffer = 300;
-//         } else{
-//             buffer = 100;
-//         }
-
-//         $('.element').each(function(){
-//             const targetPosition = $(this).offset().top;
-//             if (scrollAmount > targetPosition - wHight + buffer){
-//                 $(this).addClass("is-fadein");
-//                 console.log(buffer);
-//             }
-//         });
-//     });
-// });
-
-
-// 簡易版(スマホ非対応)
-// $(function () {
-//     $(window).scroll(function () {
-//       const windowHeight = $(window).height();
-//       const scroll = $(window).scrollTop();
-  
-//       $('.element').each(function () {
-//         const targetPosition = $(this).offset().top;
-//         if (scroll > targetPosition - windowHeight + 100) {
-//           $(this).addClass("is-fadein");
-//         }
-//       });
-//     });
-//   });

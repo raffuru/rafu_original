@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-/* .element{
+.element{
     opacity: 0;
     visibility: hidden;
     transform: translateY(30px);
@@ -17,10 +17,11 @@
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
-} */
+}
 
 body{
     background-color: #fffadf;
+    font-family: 'TsukuARdGothic-Regular','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',YuGothic,'Yu Gothic','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
 }
 
 p{
@@ -44,7 +45,7 @@ h2{
     justify-content: space-between;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     padding: 10px 50px;
     height: 65px;
@@ -59,12 +60,14 @@ h2{
 
 .header h1{
     color: #585d37;
+    line-height: 45px;
 }
 
 .navlist{
+    height: 45px;
     display: flex;
     justify-content: flex-end;
-    padding-top: 15px;
+    align-items: center;
 }
 
 .navlist li{
@@ -73,7 +76,24 @@ h2{
 
 .navlist li a{
     color: #585d37;
+
 }
+
+/* headerのレスポンシブ */
+@media(max-width:900px){
+    .header h1{
+        font-size: 20px;
+    }
+
+    .navlist li{
+        padding: 0 10px;
+    }
+
+    .navlist li a{
+        font-size: 15px;
+    }
+}
+
 
 .slider{
     position: relative;
@@ -117,12 +137,14 @@ h2{
 svg{
     height: 16vh;
     width: 100vw;
+    z-index: 3;
 }
 
 .about{
     display: flex;
     padding: 100px 0;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .left{
@@ -170,6 +192,7 @@ svg{
     display: flex;
     width: 100%;
     flex-wrap: wrap-reverse;
+    align-items: center;
 }
 
 .left2{
@@ -232,11 +255,11 @@ svg{
     display: flex;
     padding-top: 100px;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .left3{
     width: 45%;
-    padding-top: 10px;
     padding-left: 50px;
 }
 
@@ -314,6 +337,7 @@ svg{
     display: flex;
     padding-top: 50px;
     flex-wrap: wrap-reverse;
+    align-items: center;
 }
 
 .left4{
@@ -434,10 +458,11 @@ svg{
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
+    align-items: center;
 }
 
 .footerleft{
-    width: 700px;
+    width: 50%;
     padding-top: 20px;
     padding-left: 30px;
 }
@@ -445,6 +470,7 @@ svg{
 .footerlist{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footerlist li a{
@@ -452,10 +478,36 @@ svg{
 }
 
 .footerright{
-    width: 250px;
+    width: 20%;
 }
 
 .footerright h1{
     color: #585d37;
     text-align: center;
+}
+
+/* footerのレスポンシブ */
+@media(max-width:1200px){
+    .footerleft{
+        width: 60%;
+    }
+
+    .footerright{
+        width: 40%;
+    }
+}
+
+@media(max-width:600px){
+    .footerleft{
+        width: 50%;
+    }
+    
+    .footerright{
+        width: 50%;
+    }
+
+    .footerlist li{
+        width: 100%;
+        padding: 5px 0;
+    }
 }
