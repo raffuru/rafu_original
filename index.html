@@ -10,16 +10,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="header">
+    <div class="header">         
         <h1 class="logo">じゃんさいと！</h1>
-        <nav>
+        <nav class="nav">
             <ul class="navlist">
-                <li><a href="">ゲームの流れ</a></li>
-                <li><a href="">牌の種類</a></li>
-                <li><a href="">アガリ方</a></li>
-                <li><a href="">基本的な役</a></li>
+                <li><a href="#rule">ゲームの流れ</a></li>
+                <li><a href="#sort">牌の種類</a></li>
+                <li><a href="#goal">アガリ方</a></li>
+                <li><a href="#set">基本的な役</a></li>
             </ul>
         </nav>
+        <span class="nav_toggle">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span> 
     </div>
     <div class="top">
         <div class="toptitle"><img src="images/toptitle.png" alt=""></div>
@@ -30,7 +35,7 @@
         </ul>
     </div>
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg"><path id="wave" d=""/></svg>
-    <div class="about element">
+    <div class="about element" id="about">
         <div class="left">
             <div class="leftimg"><img src="images/subtitle1.png" alt=""></div>
             <p>初めはとても難しく感じる麻雀。このサイトでは
@@ -41,7 +46,7 @@
             <img src="images/image1.png" alt="">
         </div>
     </div>
-    <div class="rule element">
+    <div class="rule element" id="rule">
         <div class="left2">
             <img src="images/ruleimage.png" alt="">
         </div>
@@ -55,7 +60,7 @@
             </div>
         </div>
     </div>
-    <div class="sort element">
+    <div class="sort element" id="sort">
         <div class="left3">
             <div class="left3img"><img src="images/subtitle3.png" alt=""></div>
             <div class="left3desc"><p>麻雀牌には数牌と字牌の2種類があります。また数牌にはワンズ、ピンズ、ソウズの3種類が、字牌には風牌と三元牌の2種類があります。</p></div>
@@ -93,7 +98,7 @@
             </div>
         </div>
     </div>
-    <div class="goal element">
+    <div class="goal element" id="goal">
         <div class="left4">
             <img src="images/goalimage.gif" alt="">
         </div>
@@ -102,7 +107,7 @@
             <div class="right4desc"><p>麻雀であがるためには、メンツという3枚組を4つとアタマという2枚組を1つ完成させる必要があります。メンツには2種類あり、同じ牌を3枚集めるコーツと同じ種類の数牌で連続した数字の牌を3枚集めるシュンツがあります。</p></div>
         </div>
     </div>
-    <div class="set element">
+    <div class="set element" id="set">
         <div class="title"><img src="images/subtitle5.png" alt=""></div>
         <div class="setdesc"><p>麻雀のアガリの形を役といいます。役はたくさんありますが、ここでは頻繁に出てくる基本的な役をいくつか紹介します。</p></div>
         <div class="setwhole">
