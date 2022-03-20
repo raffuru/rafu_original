@@ -36,6 +36,23 @@ $(function(){
     });
   });
 
+  // ナビゲーションがトップのみ変化
+$(function(){
+    var topheader = $('.headertop');
+    var header = $('.header');
+    header.hide();
+
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 300){
+          header.fadeIn();
+          topheader.fadeOut();
+        } else {
+          topheader.fadeIn();
+          header.fadeOut();
+        };
+    });
+});
+
 
 //   全要素のフェードイン設定
 $(function (){
@@ -64,8 +81,8 @@ $(function (){
 // 要素間の境界wavify(うまく行ってない)
   $('#wave').wavify({
     height: 60,
-    bones: 3,
-    amplitude: 40,
-    color: '#fff',
+    bones: 2,
+    amplitude: 35,
+    color: '#fffadf',
     speed: .25,
   });

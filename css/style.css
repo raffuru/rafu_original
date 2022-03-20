@@ -51,7 +51,19 @@ h2{
     height: 65px;
     transition: 0.5s;
     background-color: #fff;
-    opacity: 0.8;
+    opacity: 0.9;
+}
+
+.headertop{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    padding: 10px 50px;
+    height: 65px;
+    transition: 0.5s;
 }
 
 .header.hide{
@@ -60,6 +72,12 @@ h2{
 
 .header h1{
     color: #585d37;
+    line-height: 45px;
+    text-align: center;
+}
+
+.headertop h1{
+    color: #333;
     line-height: 45px;
     text-align: center;
 }
@@ -77,8 +95,30 @@ h2{
 
 .navlist li a{
     color: #585d37;
-
+    display: inline-block;
+    position: relative;
 }
+
+.headertop .navlist li a{
+    color: #333;
+}
+
+li a::after {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #8f9435;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+li a:hover::after {
+    visibility: visible;
+    bottom: -3px;
+    opacity: 1;
+  }
 
 .nav_toggle{
     opacity: 0;
@@ -153,7 +193,7 @@ h2{
         visibility: hidden;
         transition: opacity .5s, visibility .5s;
         z-index: 99;
-        background-color: #fff;
+        background-color: #eee;
         height: 100vh;
       }  
     
@@ -174,6 +214,18 @@ h2{
 }
 
 
+.top{
+    position: relative;
+}
+
+svg{
+    position: absolute;
+    bottom: 0;
+    height: 16vh;
+    width: 100vw;
+    z-index: 3;
+}
+
 .slider{
     position: relative;
     z-index: 1;
@@ -185,23 +237,27 @@ h2{
 }
 
 .slider-item02{
-    background-image: url(/images/tehai.jpg);
+    background-image: url(/images/topimage02.png);
 }
 
 .slider-item03{
-    background-image: url(/images/barabarahai.jpg);
+    background-image: url(/images/topimage03.png);
+}
+
+.slider-item04{
+    background-image: url(/images/topimage04.png);
 }
 
 .slider-item{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .toptitle{
-    width: 50%;
+    width: 35%;
     position: absolute;
     top: 45%;
     left: 51%;
@@ -213,15 +269,88 @@ h2{
     width: 100%;
 }
 
-svg{
-    height: 16vh;
-    width: 100vw;
-    z-index: 3;
+.scroll{
+    width: 100%;
+    height: 80px;
+    position: relative;
 }
+
+/*=== 9-1-2 丸が動いてスクロールを促す ====*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown2{
+    /*描画位置※位置は適宜調整してください*/
+	position: absolute;
+	top: 40px;
+	left:50%;
+    z-index: 5;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown2 span{
+    /*描画位置*/
+	position: absolute;
+	left:10px;
+	bottom:10px;
+    /*テキストの形状*/
+	color: #585d37;
+	font-size: 0.7rem;
+	letter-spacing: 0.05em;
+	/*縦書き設定*/
+	-ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+/* 丸の描写 */
+.scrolldown2:before {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom:0;
+    left:-4px;
+    /*丸の形状*/
+	width:10px;
+	height:10px;
+	border-radius: 50%;
+	background:#585d37;
+    /*丸の動き1.6秒かけて透過し、永遠にループ*/
+	animation:
+		circlemove 2s ease-in-out infinite,
+		cirlemovehide 2s ease-out infinite;
+}
+
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@keyframes circlemove{
+      0%{bottom:45px;}
+     100%{bottom:-5px;}
+ }
+
+/*上から下にかけて丸が透過→不透明→透過する*/
+@keyframes cirlemovehide{
+      0%{opacity:0}
+     50%{opacity:1;}
+    80%{opacity:0.9;}
+	100%{opacity:0;}
+ }
+
+/* 線の描写 */
+.scrolldown2:after{
+	content:"";
+    /*描画位置*/
+	position: absolute;
+	bottom:0;
+	left:0;
+    /*線の形状*/
+	width:2px;
+	height: 50px;
+	background:#585d37;
+}
+
+
 
 .about{
     display: flex;
-    padding: 100px 0;
     flex-wrap: wrap;
     align-items: center;
 }
@@ -272,6 +401,7 @@ svg{
     width: 100%;
     flex-wrap: wrap-reverse;
     align-items: center;
+    padding-top: 100px;
 }
 
 .left2{
