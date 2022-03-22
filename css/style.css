@@ -28,7 +28,7 @@ p{
     color: #585d37;
     line-height: 2;
     letter-spacing: 0.1em;
-    font-size: 23px;
+    font-size: 18px;
 }
 
 h2,h3{
@@ -368,7 +368,7 @@ svg{
     width: 100%;
 }
 .left p{
-    text-align: center;
+    /* text-align: center; */
     margin: 0 auto;
     margin-top: 100px;
     width: 74%;
@@ -428,7 +428,7 @@ svg{
 }
 
 .right2 p{
-    font-size: 23px;
+    font-size: 18px;
 }
 
 .right2desc{
